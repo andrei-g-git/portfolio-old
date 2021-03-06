@@ -55,3 +55,5 @@ const convertOpsToHtml = (ops) => {
 }
 
 export default Blog;
+
+export { convertOpsToHtml }; //for testing
