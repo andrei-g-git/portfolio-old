@@ -36,6 +36,13 @@ describe("Blog", () => {
             || (html === "<p><strong>blah blah blah</strong></p>")
         ).toBeTruthy(); //apparently I shouldn't be doing this but whatever
     });
+    //is this white box testing?
+    // it("converts a post's title from 'word another word' to a 'word-another-word' format for link concatination", () => {
+    //     wrapper = shallow(<Blog posts={null} />);
+
+    //     const urlFilePath = wrapper.instance().convertToUrlFilePath("this should have hyphens");
+    //     expect(urlFilePath).toBe("this-should-have-hyphens");        
+    // });
 });
 
 const setupHelper = (wrapper, setUp) => {
@@ -48,7 +55,7 @@ const setupHelper = (wrapper, setUp) => {
 class PostsMock {
     constructor(){
         this.posts = [
-            {title: "blah", dayMonthYear: "4/March/2021", ops: [{                "attributes": {
+            {title: "blah blah", dayMonthYear: "4/March/2021", ops: [{                "attributes": {
                     "bold": true
                 },
                 insert: "blah blah blah"}]},

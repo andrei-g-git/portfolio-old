@@ -7,6 +7,8 @@ import posts from '../data/posts/posts.json';
 import PostsModel from '../js/PostsModel.js';
 import '../css/Main.scss';
 import hamburgerIcon from '../assets/hamburger.png';
+import Post from './Post.jsx'; 
+import { convertOpsToHtml } from '../js/contentAndUrlConversions.js';
 
 class Main extends Component {
     constructor(){
@@ -26,7 +28,6 @@ class Main extends Component {
                     id="nav-bar"
                 >   
                     <ul 
-                        //id="nav-links"
                         id={
                             this.state.navSliderOpen 
                             ?
@@ -93,7 +94,33 @@ class Main extends Component {
                         path="/about"
                     >
                         <About/>
-                    </Route>                      
+                    </Route>    
+
+                    <Route
+                        path="/post/:id"
+                        render={(routeProps) => {
+                            const intParamId = parseInt(routeProps.match.params.id);
+                            // const postArrayWithOneElement = this.state.postsModel
+                            //     .getPostById(intParamId);
+                            // const post = postArrayWithOneElement[0];
+                            const post = this.state.postsModel
+                                 .getPostById(intParamId);
+
+                            return (post !== null) && (typeof post !== "undefined") ? (
+                                <Post
+                                    title={post.title}
+                                    date={post.dayMonthYear} //replace with date
+                                    content={convertOpsToHtml(post.ops)}
+                                    key={post.id}                                        
+                                />
+                            )
+
+                            :
+
+                            <div>something went wrong</div>
+                        }}
+                    /> 
+
                 </Switch>
                 
             </div>
@@ -110,7 +137,9 @@ class Main extends Component {
         this.setState({
             navSliderOpen: false
         })
-    }
+    } 
 }
 
 export default Main;
+
+

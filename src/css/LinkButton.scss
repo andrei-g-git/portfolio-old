@@ -1,0 +1,13 @@
+@import 'Variables.scss';
+
+.link-button{
+    width: 15rem;
+    height: 2rem;
+    background-color: green;
+    text-decoration: none;
+    background-color: $complementary-light-color;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    color: white;
+    margin: 0px $blog-container-inner-horizontal-padding;
+}

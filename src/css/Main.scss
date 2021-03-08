@@ -4,11 +4,9 @@
     border: solid lightgray;
     border-width: 0px 1px;
     margin: 0px 10%;
-    padding: 0px 2rem;
+    //padding: 0px 2rem;
 
     height: minmax(100vh, auto);
-
-    background-color: gray; //test, shouldn't be here
 }
 
 #nav-bar{
@@ -17,7 +15,7 @@
     align-items: center;
     width: 100%;
     height: $nav-height;
-    background-color: gray; //test, shouldn't be here
+    background-color: $main-color;
 }
 
 @mixin navLinks(){

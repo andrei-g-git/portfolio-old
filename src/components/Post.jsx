@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/Post.scss';
 
 function Post(props) {
+
     return (
         <article
             className="post"
@@ -26,3 +27,5 @@ function Post(props) {
 }
 
 export default Post;
+
+

@@ -2,58 +2,57 @@ import React from 'react';
 import Post from './Post.jsx';
 import { useState } from 'react';
 import '../css/Blog.scss';
-
-//delta-to-html
-import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
-
-
-// const renderer  = require('quilljs-renderer');
-// const Document  = renderer.Document;
-// renderer.loadFormat('html');
+import LinkButton from './LinkButton.jsx';
+import {Route} from 'react-router-dom';
+import { convertOpsToHtml} from '../js/contentAndUrlConversions.js';
 
 function Blog(props) {
-
-    const [posts, setPosts] = useState(props.posts); //won't need to update with props because the posts model is changed here exclusively, I just need it in Main so I can display featured posts there
-
     return (
         <div
             id="blog-container"
         >
-            {
-                posts.getPosts().map((post, index) => {//can delete posts, index bad
+            <label
+                id="latest-posts-label"
+            >
+                Latest Posts
+            </label>
 
-                    return post !== null
+            <div>
+            {
+                props.posts.getPosts().map((post) => {
+
+                    return post !== null 
 
                     ?
                         <div className="post-test-wrapper">
                             <Post
                                 title={post.title}
-                                date={post.dateMonthYear} //replace with date
+                                date={post.dayMonthYear}
                                 content={convertOpsToHtml(post.ops)}
-                                key={index} //bad move
+                                key={post.id} 
                             >
                             </Post>
+
+                            <LinkButton
+                                path={post.id}
+                                handle="Continue Reading"
+                            />
                         </div>                            
 
                     :
 
                     <div> No posts yet! </div>
-                })
+                })              
             }
+            </div>
         </div>
-    );
-
+    );  
 }
 
-const convertOpsToHtml = (ops) => {
-    // console.log(new Document(ops).convertTo('html'))
-    // return new Document(ops).convertTo('html');
-
-    var cfg = {inlineStyles: true};
-    var converter = new QuillDeltaToHtmlConverter(ops, cfg);
-    return converter.convert(); 
+const convertToUrlFilePath = (date) => {
+    const bp = 123;
+    return date.replaceAll("/", "-");
 }
 
 export default Blog;
 
-export { convertOpsToHtml }; //for testing

@@ -13,16 +13,22 @@ class PostsModel{
     }
 
     getDateAt(index){ 
-        return this.posts[index].date; //should be dayMonthYear for now
+        return this.posts[index].dayMonthYear; //should be dayMonthYear for now
     }
     
     getContentAt(index){
         return this.posts[index].content; //should be ops.etc
     } 
     
+    getPostById(id){
+        const postArrayWithOneElement = this.posts.filter(post => post.id === id); 
+        return postArrayWithOneElement[0];
+    }
+
     pushPost(post){
         this.posts.push(post);
-    }    
+    }   
+    
 }
 
 export default PostsModel;

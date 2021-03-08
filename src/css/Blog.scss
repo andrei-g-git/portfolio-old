@@ -1,7 +1,14 @@
 @import 'Variables.scss';
 
-#blog{
+#blog-container{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+#latest-posts-label{
+    align-self: center;
+    margin: 1rem 0rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 1px $standard-border-color;
 }
