@@ -20,7 +20,7 @@ class PostsModel{
         return this.posts[index].content; //should be ops.etc
     } 
     
-    getPostById(id){
+    getPostById(id){ //CAREFUL THIS RETURNS A !!NEW!! ARRAY
         const postArrayWithOneElement = this.posts.filter(post => post.id === id); 
         return postArrayWithOneElement[0];
     }

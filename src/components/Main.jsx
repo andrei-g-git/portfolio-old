@@ -10,10 +10,37 @@ import hamburgerIcon from '../assets/hamburger.png';
 import Post from './Post.jsx'; 
 import { convertOpsToHtml } from '../js/contentAndUrlConversions.js';
 
+import { createStore, combineReducers, compose } from 'redux';
+import { postsReducer } from '../js/postsReducer.js';
+import { uiReducer } from '../js/uiReducer.js';
+
+import * as actions from '../js/actions.js';
+
+import { connect } from 'react-redux';
+
 class Main extends Component {
+
     constructor(){
         super();
-        
+     
+        //should clean this up after I make sure it works
+        this.reducers = combineReducers({
+            postsReducer: postsReducer,
+            uiReducer: uiReducer
+        });
+
+        this.store = createStore(
+            this.reducers,
+            compose(typeof window === "object" &&
+                typeof window.devToolsExtension !== "undefined" ?
+                window.devToolsExtension() :
+                f => f
+            )
+        );
+
+        this.unsubscribe()
+        //
+
         this.state = {
             postsModel: new PostsModel(posts),
             navSliderOpen: false
@@ -29,7 +56,7 @@ class Main extends Component {
                 >   
                     <ul 
                         id={
-                            this.state.navSliderOpen 
+                            this.store.getState().uiReducer.navSliderOpen
                             ?
                                 "nav-links-active"
                             :
@@ -103,8 +130,15 @@ class Main extends Component {
                             // const postArrayWithOneElement = this.state.postsModel
                             //     .getPostById(intParamId);
                             // const post = postArrayWithOneElement[0];
-                            const post = this.state.postsModel
-                                 .getPostById(intParamId);
+
+
+                            // const post = this.state.postsModel
+                            //      .getPostById(intParamId);
+                            const posts = this.store.getState().postsReducer.posts; //demeter
+                            const postArrayWithOneElement = posts
+                                .filter(post => post.id === intParamId);
+
+                            const post = postArrayWithOneElement[0];
 
                             return (post !== null) && (typeof post !== "undefined") ? (
                                 <Post
@@ -128,18 +162,40 @@ class Main extends Component {
     }
 
     handleHamburgerMenu = () => {
-        this.setState({
+/*         this.setState({
             navSliderOpen: ! this.state.navSliderOpen
-        })
+        }) */
+        this.store.dispatch(actions.navSliderOpened());
     }
 
     closeNavSlider = () => { //maybe I could just use handleHamburgerMenu, can't think of a situation where clicking a link should open the slider
-        this.setState({
-            navSliderOpen: false
-        })
+        // this.setState({
+        //     navSliderOpen: false
+        // })
+        this.store.dispatch(actions.navSliderClosed());
     } 
+
+    
+    unsubscribe = () => {
+        this.store.subscribe(
+            //this.handleHamburgerMenu, //these create an infinite loop because the thing that dispatches change actions is the same thing that's listening for change
+            //this.closeNavSlider         //a listener should be the thing that awaits for state change to update ui etc
+            () => {
+                console.log("blah") 
+
+                this.forceUpdate(); //fuck react and fuck your face
+            }           
+        )
+    }
 }
 
-export default Main;
+// const mapStateToProps = (state) => {
+//     return{
+//         navSliderOpen: state.navSliderOpen //I actually don't need props here what the fuck am I even doing
+//                         //this isn't even the correct store path, unless it's acutally referring to the component state         
+//     }
+// }
+
+export default /* connect()( */Main/* ) */;
 
 
