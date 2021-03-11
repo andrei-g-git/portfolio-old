@@ -3,60 +3,42 @@ import { Link, Switch, Route } from 'react-router-dom';
 import Blog from './Blog.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
-import posts from '../data/posts/posts.json';
-import PostsModel from '../js/PostsModel.js';
 import '../css/Main.scss';
 import hamburgerIcon from '../assets/hamburger.png';
 import Post from './Post.jsx'; 
 import { convertOpsToHtml } from '../js/contentAndUrlConversions.js';
-
-import { createStore, combineReducers, compose } from 'redux';
-import { postsReducer } from '../js/postsReducer.js';
-import { uiReducer } from '../js/uiReducer.js';
-
 import * as actions from '../js/actions.js';
-
 import { connect } from 'react-redux';
 
-class Main extends Component {
-
-    constructor(){
+class Main extends Component { 
+    constructor(){ //delete after integrating touch coords with redux
         super();
-     
-        //should clean this up after I make sure it works
-        this.reducers = combineReducers({
-            postsReducer: postsReducer,
-            uiReducer: uiReducer
-        });
 
-        this.store = createStore(
-            this.reducers,
-            compose(typeof window === "object" &&
-                typeof window.devToolsExtension !== "undefined" ?
-                window.devToolsExtension() :
-                f => f
-            )
-        );
-
-        this.unsubscribe()
-        //
-
-        this.state = {
-            postsModel: new PostsModel(posts),
-            navSliderOpen: false
+        this.state={
+            touchStartX: 0,
+            touchStartY:0,
+            touchMoveX: 0,
+            touchMoveY: 0
         }
     }
     render() {
+
+        // console.log(this.state.touchStartX + "   " + this.state.touchStartY);
+        // console.log(this.state.touchMoveX + "   " + this.state.touchMoveY);
+
         return (
             <div
                 id="main"
+                onTouchStart={this.handleTouchStart}
+                onTouchMove={this.handleTouchMove}
+                onTouchEnd={this.handleTouchEnd}
             >
                 <nav
                     id="nav-bar"
                 >   
                     <ul 
                         id={
-                            this.store.getState().uiReducer.navSliderOpen
+                                this.props.navSliderOpen
                             ?
                                 "nav-links-active"
                             :
@@ -66,7 +48,7 @@ class Main extends Component {
                         <Link
                             className="nav-link"
                             to="/"
-                            onClick={this.closeNavSlider}
+                            onClick={() => this.props.closeNavSlider()}
                         >
                             Home
                         </Link>
@@ -81,7 +63,7 @@ class Main extends Component {
                         <Link
                             className="nav-link"
                             to="/blog"
-                            onClick={this.closeNavSlider}
+                            onClick={() => this.props.closeNavSlider()}
                         >
                             Blog
                         </Link>
@@ -89,7 +71,7 @@ class Main extends Component {
                         <Link
                             className="nav-link"
                             to="/about"
-                            onClick={this.closeNavSlider}
+                            onClick={() => this.props.closeNavSlider()}
                         >
                             About
                         </Link>   
@@ -98,7 +80,7 @@ class Main extends Component {
                         src={hamburgerIcon}
                         alt="n/a"
                         id="hamburger-toggle"
-                        onClick={this.handleHamburgerMenu}
+                        onClick={() => this.props.handleHamburgerMenu()}
                     />                 
                 </nav>
 
@@ -113,7 +95,7 @@ class Main extends Component {
                         path="/blog"
                     >
                         <Blog
-                            posts={this.state.postsModel}
+                            posts={this.props.posts}
                         />
                     </Route>
 
@@ -127,14 +109,7 @@ class Main extends Component {
                         path="/post/:id"
                         render={(routeProps) => {
                             const intParamId = parseInt(routeProps.match.params.id);
-                            // const postArrayWithOneElement = this.state.postsModel
-                            //     .getPostById(intParamId);
-                            // const post = postArrayWithOneElement[0];
-
-
-                            // const post = this.state.postsModel
-                            //      .getPostById(intParamId);
-                            const posts = this.store.getState().postsReducer.posts; //demeter
+                            const posts = this.props.posts;
                             const postArrayWithOneElement = posts
                                 .filter(post => post.id === intParamId);
 
@@ -161,41 +136,62 @@ class Main extends Component {
         );
     }
 
-    handleHamburgerMenu = () => {
-/*         this.setState({
-            navSliderOpen: ! this.state.navSliderOpen
-        }) */
-        this.store.dispatch(actions.navSliderOpened());
+
+
+
+    //these should not be stateful and should use redux
+    handleTouchStart = (event) => {
+        this.setState({
+            touchStartX: event.touches[0].clientX,
+            touchStartY: event.touches[0].clientY,
+        });
+    }
+    handleTouchMove = (event) => {
+        this.setState({
+            touchMoveX: event.touches[0].clientX,
+            touchMoveY: event.touches[0].clientY,
+        });
+    }
+    handleTouchEnd = (event) => {
+        const startX = this.state.touchStartX;
+        const startY = this.state.touchStartY;
+        const moveX = this.state.touchMoveX;
+        const moveY = this.state.touchMoveY;
+
+        if((startX < 90)
+            || (startX > (window.screen.width - 90))
+        ){
+            if((startX + 100) < moveX){
+                console.log("right");
+            } else if((startX - 100) > moveX){
+                console.log("left");
+                this.props.handleHamburgerMenu()
+            }
+        }
     }
 
-    closeNavSlider = () => { //maybe I could just use handleHamburgerMenu, can't think of a situation where clicking a link should open the slider
-        // this.setState({
-        //     navSliderOpen: false
-        // })
-        this.store.dispatch(actions.navSliderClosed());
-    } 
 
-    
-    unsubscribe = () => {
-        this.store.subscribe(
-            //this.handleHamburgerMenu, //these create an infinite loop because the thing that dispatches change actions is the same thing that's listening for change
-            //this.closeNavSlider         //a listener should be the thing that awaits for state change to update ui etc
-            () => {
-                console.log("blah") 
 
-                this.forceUpdate(); //fuck react and fuck your face
-            }           
-        )
+}
+
+const mapStateToProps = (state) => {
+    return {
+        navSliderOpen: state.uiReducer.navSliderOpen,
+        posts: state.postsReducer.posts
     }
 }
 
-// const mapStateToProps = (state) => {
-//     return{
-//         navSliderOpen: state.navSliderOpen //I actually don't need props here what the fuck am I even doing
-//                         //this isn't even the correct store path, unless it's acutally referring to the component state         
-//     }
-// }
+const mapDispatchToProps = (dispatch) => {
+    return{
+        handleHamburgerMenu: () => {
+            dispatch(actions.navSliderOpened());
+        },
+        closeNavSlider: () => {
+            dispatch(actions.navSliderClosed());
+        }
+    }
+}
 
-export default /* connect()( */Main/* ) */;
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
 
 

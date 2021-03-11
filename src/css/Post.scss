@@ -1,22 +1,49 @@
 @import 'Variables.scss';
 
-.post{
+.post, .card{
     border: solid  $standard-border-color;
-    border-width: 1px 0px;
-    margin: 1rem 0px;
+    border-width: 1px 0 0 0;//1px 0px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.title, .content, .date{
+.title, .card-title, .content, .card-content/*,  .date, .card-date */{
     word-wrap: break-word;
     padding: 0px $blog-container-inner-horizontal-padding; 
 }
 
-.title{
-  
+.card-date{
+    padding: 0rem 0.2rem;
+    background-color: $main-color;
 }
-.content{
+
+.date, .card-date{ //changes with port dimensions, margins don't disappear
+    position: relative;
+    top: 0.6rem;
+    // left: 10%;
+    color: $nav-ui-color;
+    margin-left: $blog-container-inner-horizontal-padding;
+}
+
+h5{
+    margin-top: 0; margin-bottom: 0;
+}
+
+.card-content{
     background-image: 
         linear-gradient(to top, rgba(100, 100, 100, 1), 20%, rgba(255, 255, 255, 0));
     height: 7.5rem;
     overflow: hidden;
+}
+
+.card-image{
+    max-height: 25rem;
+    overflow-y: hidden;
+
+    img{
+        width: 100%;
+        align-self: center;
+        max-height: initial;
+    }
 }

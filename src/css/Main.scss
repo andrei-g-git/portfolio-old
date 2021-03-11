@@ -3,10 +3,11 @@
 #main{
     border: solid lightgray;
     border-width: 0px 1px;
-    margin: 0px 10%;
+    margin: 0px 20%;
     //padding: 0px 2rem;
 
-    height: minmax(100vh, auto);
+    //height: minmax(100vh, auto);
+    height: 100vh;
 }
 
 #nav-bar{
@@ -46,7 +47,7 @@
 #hamburger-toggle{
     display: none;
     //height: $nav-height/2;
-    height: 50%;
+    height: 70%;
     align-self: center;
 }
 
@@ -69,6 +70,7 @@
 
     #hamburger-toggle{
         display: block;
+        margin-right: $nav-bar-horizontal-padding;
     }
 
     #nav-links-active{
@@ -77,5 +79,9 @@
 
         transform: translateX(0%);
         transition: transform 0.1s ease-out;
+    }
+
+    #nav-bar{
+        position: fixed;
     }
 }

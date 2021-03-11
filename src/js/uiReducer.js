@@ -12,13 +12,6 @@ const uiReducer = (state = initialState, action) => {
             }                               //reducer, not the whole store
 
         case actionTypes.NAV_SLIDER_CLOSED:
-            // return {
-            //     ...state,
-            //     uiReducer: {
-            //         ...state.uiReducer,
-            //         navSliderOpen: action.payload
-            //     }
-            // }
             return{
                 navSliderOpen: action.payload
             }

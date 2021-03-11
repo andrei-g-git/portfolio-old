@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post.jsx';
+import PostCard from './PostCard.jsx';
 import { useState } from 'react';
 import '../css/Blog.scss';
 import LinkButton from './LinkButton.jsx';
@@ -19,19 +20,19 @@ function Blog(props) {
 
             <div>
             {
-                props.posts.getPosts().map((post) => {
+                props.posts.map((post) => {
 
                     return post !== null 
 
                     ?
                         <div className="post-test-wrapper">
-                            <Post
+                            <PostCard
                                 title={post.title}
                                 date={post.dayMonthYear}
                                 content={convertOpsToHtml(post.ops)}
                                 key={post.id} 
                             >
-                            </Post>
+                            </PostCard>
 
                             <LinkButton
                                 path={post.id}
