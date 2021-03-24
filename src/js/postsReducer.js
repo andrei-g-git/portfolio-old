@@ -1,7 +1,7 @@
 //state should be somewhere else
 
 import PostsModel from '../js/PostsModel.js';
-import posts from '../data/posts/posts.json';
+import posts from '../data/posts/actualBlogPosts.json';
 
 const initialState = {
     //postsModel: new PostsModel(posts) //unfortunately the react store doesn't deal with OOP models

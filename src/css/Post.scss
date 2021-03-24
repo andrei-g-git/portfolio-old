@@ -35,11 +35,13 @@ h5{
         linear-gradient(to top, rgba(100, 100, 100, 1), 20%, rgba(255, 255, 255, 0));
     height: 7.5rem;
     overflow: hidden;
+    //z-index: 99999;
 }
 
 .card-image{
     max-height: 25rem;
     overflow-y: hidden;
+    //z-index: -999;
 
     img{
         width: 100%;
