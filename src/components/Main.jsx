@@ -25,6 +25,7 @@ class Main extends Component {
 
         // console.log(this.state.touchStartX + "   " + this.state.touchStartY);
         // console.log(this.state.touchMoveX + "   " + this.state.touchMoveY);
+        //blah
 
         return (
             <div
