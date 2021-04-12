@@ -1,6 +1,5 @@
 [
     {
-        "id": 2345354643636,
         "title": "A fairly generic rich text editor for static websites.",
         "dayMonthYear": "20/March/2021",
         "ops": [
@@ -19,7 +18,7 @@
                 "insert": "Quilljs"
             },
             {
-                "insert": " framework. It's a simple tool, still rough around the edges, that works by merging the data containing all your previous posts with the new one you've just written. It's all saved in a JSON array of posts consisting of a title, a date, and your actual post content; The post content is where the data format gets more complicated - whereas the title and date are just simple strings, the content is what the makers of the quill framework call a 'delta' and it looks something like this:\n\n        "
+                "insert": " framework. It's a simple tool, still rough around the edges, that works by merging the data containing all your previous posts with the new one you've just written. It's all saved in a JSON array of posts consisting of a title, a date, and your actual post content; The post content is where the data format gets more complicated - whereas the title and date are just simple strings, the content is what the makers of the quill framework call a 'delta' and it looks something like this:\n\n��������"
             },
             {
                 "attributes": {
@@ -28,7 +27,7 @@
                 "insert": "\"ops\""
             },
             {
-                "insert": ": [\n            {\n                "
+                "insert": ":�[\n������������{\n����������������"
             },
             {
                 "attributes": {
@@ -37,7 +36,7 @@
                 "insert": "\"attributes\""
             },
             {
-                "insert": ": {\n                    "
+                "insert": ":�{\n��������������������"
             },
             {
                 "attributes": {
@@ -46,7 +45,7 @@
                 "insert": "\"bold\""
             },
             {
-                "insert": ": "
+                "insert": ":�"
             },
             {
                 "attributes": {
@@ -55,7 +54,7 @@
                 "insert": "true"
             },
             {
-                "insert": ",\n                    "
+                "insert": ",\n��������������������"
             },
             {
                 "attributes": {
@@ -64,7 +63,7 @@
                 "insert": "\"link\""
             },
             {
-                "insert": ": "
+                "insert": ":�"
             },
             {
                 "attributes": {
@@ -73,7 +72,7 @@
                 "insert": "\"http://wikipedia.org\""
             },
             {
-                "insert": "\n                },\n                "
+                "insert": "\n����������������},\n����������������"
             },
             {
                 "attributes": {
@@ -82,16 +81,16 @@
                 "insert": "\"insert\""
             },
             {
-                "insert": ": "
+                "insert": ":�"
             },
             {
                 "attributes": {
                     "color": "#ce9178"
                 },
-                "insert": "\"Lorem Ipsum\""
+                "insert": "\"Lorem�Ipsum\""
             },
             {
-                "insert": "\n            },\n            {\n                "
+                "insert": "\n������������},\n������������{\n����������������"
             },
             {
                 "attributes": {
@@ -100,16 +99,16 @@
                 "insert": "\"insert\""
             },
             {
-                "insert": ": "
+                "insert": ":�"
             },
             {
                 "attributes": {
                     "color": "#ce9178"
                 },
-                "insert": "\" is simply \""
+                "insert": "\"�is�simply�\""
             },
             {
-                "insert": "\n            },\n            {\n                "
+                "insert": "\n������������},\n������������{\n����������������"
             },
             {
                 "attributes": {
@@ -118,7 +117,7 @@
                 "insert": "\"attributes\""
             },
             {
-                "insert": ": {\n                    "
+                "insert": ":�{\n��������������������"
             },
             {
                 "attributes": {
@@ -127,7 +126,7 @@
                 "insert": "\"color\""
             },
             {
-                "insert": ": "
+                "insert": ":�"
             },
             {
                 "attributes": {
@@ -136,7 +135,7 @@
                 "insert": "\"#e60000\""
             },
             {
-                "insert": "\n                },\n                "
+                "insert": "\n����������������},\n����������������"
             },
             {
                 "attributes": {
@@ -145,16 +144,16 @@
                 "insert": "\"insert\""
             },
             {
-                "insert": ": "
+                "insert": ":�"
             },
             {
                 "attributes": {
                     "color": "#ce9178"
                 },
-                "insert": "\"dummy text\""
+                "insert": "\"dummy�text\""
             },
             {
-                "insert": "\n            }\n\t\t]\n\nAs you can see, the content is split up into segments that contain commonly shared css styles. This allows exporting the content with as much complexity as a WYSIWYG editor can muster. \n\nOf course, you can't really get your html blog to display the blog post in this format, so you'll need to convert the JSON to a familiar html base. For this we need a third party addon on top of quill:\n\nhttps://github.com/nozer/quill-delta-to-html\n\nThis easy-to-set-up tool will transform your data into usable html in just a couple lines of code:\n\n"
+                "insert": "\n������������}\n\t\t]\n\nAs you can see, the content is split up into segments that contain commonly shared css styles. This allows exporting the content with as much complexity as a WYSIWYG editor can muster. \n\nOf course, you can't really get your html blog to display the blog post in this format, so you'll need to convert the JSON to a familiar html base. For this we need a third party addon on top of quill:\n\nhttps://github.com/nozer/quill-delta-to-html\n\nThis easy-to-set-up tool will transform your data into usable html in just a couple lines of code:\n\n"
             },
             {
                 "attributes": {
@@ -163,7 +162,7 @@
                 "insert": "import"
             },
             {
-                "insert": " { "
+                "insert": "�{�"
             },
             {
                 "attributes": {
@@ -172,7 +171,7 @@
                 "insert": "QuillDeltaToHtmlConverter"
             },
             {
-                "insert": " } "
+                "insert": "�}�"
             },
             {
                 "attributes": {
@@ -181,7 +180,7 @@
                 "insert": "from"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -199,7 +198,7 @@
                 "insert": "const"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -208,7 +207,7 @@
                 "insert": "convertOpsToHtml"
             },
             {
-                "insert": " = ("
+                "insert": "�=�("
             },
             {
                 "attributes": {
@@ -217,7 +216,7 @@
                 "insert": "ops"
             },
             {
-                "insert": ") "
+                "insert": ")�"
             },
             {
                 "attributes": {
@@ -226,7 +225,7 @@
                 "insert": "=>"
             },
             {
-                "insert": " {\n    "
+                "insert": "�{\n����"
             },
             {
                 "attributes": {
@@ -235,7 +234,7 @@
                 "insert": "var"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -244,7 +243,7 @@
                 "insert": "cfg"
             },
             {
-                "insert": " = {"
+                "insert": "�=�{"
             },
             {
                 "attributes": {
@@ -253,7 +252,7 @@
                 "insert": "inlineStyles:"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -262,7 +261,7 @@
                 "insert": "true"
             },
             {
-                "insert": "};\n    "
+                "insert": "};\n����"
             },
             {
                 "attributes": {
@@ -271,7 +270,7 @@
                 "insert": "var"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -280,7 +279,7 @@
                 "insert": "converter"
             },
             {
-                "insert": " = "
+                "insert": "�=�"
             },
             {
                 "attributes": {
@@ -289,7 +288,7 @@
                 "insert": "new"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -307,7 +306,7 @@
                 "insert": "ops"
             },
             {
-                "insert": ", "
+                "insert": ",�"
             },
             {
                 "attributes": {
@@ -316,7 +315,7 @@
                 "insert": "cfg"
             },
             {
-                "insert": ");\n    "
+                "insert": ");\n����"
             },
             {
                 "attributes": {
@@ -325,7 +324,7 @@
                 "insert": "return"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -343,7 +342,7 @@
                 "insert": "convert"
             },
             {
-                "insert": "(); \n}\n\nIf you're using React you'll probably want to load the resulting html in this manner:\n\n    "
+                "insert": "();�\n}\n\nIf you're using React you'll probably want to load the resulting html in this manner:\n\n����"
             },
             {
                 "attributes": {
@@ -358,13 +357,13 @@
                 "insert": "p"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
                     "color": "#9cdcfe"
                 },
-                "insert": " dangerouslySetInnerHTML"
+                "insert": "�dangerouslySetInnerHTML"
             },
             {
                 "insert": "="
@@ -385,7 +384,7 @@
                 "insert": "__html:"
             },
             {
-                "insert": " "
+                "insert": "�"
             },
             {
                 "attributes": {
@@ -435,7 +434,6 @@
         ]
     },
     {
-        "id": 23455463547636,
         "title": "The text editor gets some save functionality",
         "dayMonthYear": "23/March/2021",
         "ops": [
@@ -458,7 +456,6 @@
         ]
     },
     {
-        "id": 23546765484678,
         "title": "So I started making a note-taking app",
         "dayMonthYear": "24/March/2021",
         "ops": [
@@ -499,6 +496,64 @@
             },
             {
                 "insert": " browser extension ... that's because it is! I don't think the formula is broke so I didn't set out to fix anything. Well, except the useless html export format. And the fact that you have to switch between the note list and the editor even if you're working from a wide-screen monitor, which I find inconvenient. Ok I'll be changing a few things here and there, we'll see how it goes.\n"
+            }
+        ]
+    },
+    {
+        "title": "I'm making an ecommerce app with it's own server to polish my full-stack skills.",
+        "dayMonthYear": "9/April/2021",
+        "ops": [
+            {
+                "insert": "Making static and simplistic online shops may be enough to get a web developer going, but until we gain experience working behind the curtain, there can never really be any question of expertise, even if swear by your identity as a front-end dev. You need to know what those convenient AJAX calls actually do. You need to know how a server handles security. You need to know [------------------------------]\n\nThe rise in complexity prompted a more comprehensive site design chalk full of features.\n\n"
+            },
+            {
+                "insert": {
+                    "image": "https://i.ibb.co/K9sdN3r/mock-ecommerce-featured1.png"
+                }
+            },
+            {
+                "insert": "       "
+            },
+            {
+                "insert": {
+                    "image": "https://i.ibb.co/Mk58fxT/mock-ecommerce-product1.png"
+                }
+            },
+            {
+                "insert": "\n\n\nSo there's now a ton of data that can populate the store's various showcase items. User authentication and a cart feature are, of course, now possible as well:\n\n\n"
+            },
+            {
+                "insert": {
+                    "image": "https://i.ibb.co/znLg6cj/mock-ecommerce-cart1.png"
+                }
+            },
+            {
+                "insert": "      "
+            },
+            {
+                "insert": {
+                    "image": "https://i.ibb.co/CKMkD7M/mock-ecommerce-authentication1.png"
+                }
+            },
+            {
+                "insert": "\n\n\nAlright then! I can't wait to turn these mock ups into a usable app!\n"
+            }
+        ]
+    },
+    {
+        "title": "My online shop is taking shape",
+        "dayMonthYear": "12/April/2021",
+        "ops": [
+            {
+                "insert": "I couldn't wait until it was done, so I'm showing off an early alpha version that has about half of the functionality I have planned for it; Right now it can grab and display all or individual products from a mysql data base and sign the user into it.\n\n"
+            },
+            {
+                "insert": {
+                    "image": "https://i.ibb.co/Ch80XNW/ecommerce1.png"
+                }
+            },
+            {
+                "insert": "\n\nIt's not the exact same design as the one I dummied with adobe xd, but the intention is to get a working app out first and then worry about the UX particulars.\n\nThe app is made 'from scratch' as much as people make them from scratch these days, which is to say no Gatsby or Bootstrap or anything like that. I do use front-end and other libraries like React and Redux, but the idea is to make an app with the least amount of third party fanciness that a developer will realistically use - I don't imagine anyone still makes complex websites without a framework anymore. On the backend it connects to an Express-powered server and a mysql data base.\n\nHopefully, in the following days, I might decide not to be such a penny pincher and actually upload this to a proper server. \n \n"
             }
         ]
     }

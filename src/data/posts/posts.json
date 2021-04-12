@@ -1,261 +1,547 @@
 [
-    {   "id": 123413243,
-        "title": "What is Lorem Ipsum",
-        "dayMonthYear": "4/March/2021",
+    {
+        "id": 43873487,
+        "title": "A fairly generic rich text editor for static websites.",
+        "dayMonthYear": "20/March/2021",
         "ops": [
             {
-                "attributes": {
-                    "bold": true,
-                    "link": "http://wikipedia.org"
-                },
-                "insert": "Lorem Ipsum"
-            },
-            {
-                "insert": " is simply "
-            },
-            {
-                "attributes": {
-                    "color": "#e60000"
-                },
-                "insert": "dummy text"
-            },
-            {
-                "insert": " of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like "
-            },
-            {
-                "attributes": {
-                    "color": "#66a3e0",
-                    "underline": true
-                },
-                "insert": "Aldus PageMaker"
-            },
-            {
-                "insert": " including versions of Lorem Ipsum.\n\n"
-            },
-            {
                 "insert": {
-                    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.63iZQ2sDfWfCQayW5_f6mwHaD4%26pid%3DApi&f=1"
+                    "image": "https://s3.imgcdn.dev/IZdJB.png"
                 }
             },
             {
-                "insert": "\n"
+                "insert": "\n\nFree blog hosting can get you a long way these days, with websites like Netlify giving you, for most practical purposes, unlimited bandwidth for your blogger-head needs, but once you look at the fine print you realize that these companies aren't in the business of handing away all-you-can-eat free stuff for nothing. The generous hosting plans that you're struck with when coming by these sites usually come with a bottle neck or two that leave the other features almost useless; For a blogger, it's the relatively small number of monthly form submissions that does it. You're going to run into that wall a lot sooner than you'll expend your hundreds of GB of bandwidth, especially if your blog has user comments functionality.\n\nThe obvious solution to this barrier, as far as growing your blog goes, at least, is to hard code your posts and rebuild the blog every time you want to update - hey, it's not a perfect solution but beggar and choosers and all that! And if your static blog is made to handle data files, the process doesn't need to be painful at all!\n\nThe rich text editor in the above screen capture is made with the "
             },
             {
-                "insert": "filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler "
+                "attributes": {
+                    "link": "https://quilljs.com/"
+                },
+                "insert": "Quilljs"
             },
             {
-                "insert": "\n\n"
+                "insert": " framework. It's a simple tool, still rough around the edges, that works by merging the data containing all your previous posts with the new one you've just written. It's all saved in a JSON array of posts consisting of a title, a date, and your actual post content; The post content is where the data format gets more complicated - whereas the title and date are just simple strings, the content is what the makers of the quill framework call a 'delta' and it looks something like this:\n\n        "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"ops\""
+            },
+            {
+                "insert": ": [\n            {\n                "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"attributes\""
+            },
+            {
+                "insert": ": {\n                    "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"bold\""
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "true"
+            },
+            {
+                "insert": ",\n                    "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"link\""
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "color": "#ce9178"
+                },
+                "insert": "\"http://wikipedia.org\""
+            },
+            {
+                "insert": "\n                },\n                "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"insert\""
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "color": "#ce9178"
+                },
+                "insert": "\"Lorem Ipsum\""
+            },
+            {
+                "insert": "\n            },\n            {\n                "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"insert\""
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "color": "#ce9178"
+                },
+                "insert": "\" is simply \""
+            },
+            {
+                "insert": "\n            },\n            {\n                "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"attributes\""
+            },
+            {
+                "insert": ": {\n                    "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"color\""
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "color": "#ce9178"
+                },
+                "insert": "\"#e60000\""
+            },
+            {
+                "insert": "\n                },\n                "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "\"insert\""
+            },
+            {
+                "insert": ": "
+            },
+            {
+                "attributes": {
+                    "color": "#ce9178"
+                },
+                "insert": "\"dummy text\""
+            },
+            {
+                "insert": "\n            }\n\t\t]\n\nAs you can see, the content is split up into segments that contain commonly shared css styles. This allows exporting the content with as much complexity as a WYSIWYG editor can muster. \n\nOf course, you can't really get your html blog to display the blog post in this format, so you'll need to convert the JSON to a familiar html base. For this we need a third party addon on top of quill:\n\nhttps://github.com/nozer/quill-delta-to-html\n\nThis easy-to-set-up tool will transform your data into usable html in just a couple lines of code:\n\n"
+            },
+            {
+                "attributes": {
+                    "color": "#c586c0"
+                },
+                "insert": "import"
+            },
+            {
+                "insert": " { "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "QuillDeltaToHtmlConverter"
+            },
+            {
+                "insert": " } "
+            },
+            {
+                "attributes": {
+                    "color": "#c586c0"
+                },
+                "insert": "from"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#ce9178"
+                },
+                "insert": "'quill-delta-to-html'"
+            },
+            {
+                "insert": ";\n\n"
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "const"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#dcdcaa"
+                },
+                "insert": "convertOpsToHtml"
+            },
+            {
+                "insert": " = ("
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "ops"
+            },
+            {
+                "insert": ") "
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "=>"
+            },
+            {
+                "insert": " {\n    "
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "var"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "cfg"
+            },
+            {
+                "insert": " = {"
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "inlineStyles:"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "true"
+            },
+            {
+                "insert": "};\n    "
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "var"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "converter"
+            },
+            {
+                "insert": " = "
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "new"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#4ec9b0"
+                },
+                "insert": "QuillDeltaToHtmlConverter"
+            },
+            {
+                "insert": "("
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "ops"
+            },
+            {
+                "insert": ", "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "cfg"
+            },
+            {
+                "insert": ");\n    "
+            },
+            {
+                "attributes": {
+                    "color": "#c586c0"
+                },
+                "insert": "return"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "converter"
+            },
+            {
+                "insert": "."
+            },
+            {
+                "attributes": {
+                    "color": "#dcdcaa"
+                },
+                "insert": "convert"
+            },
+            {
+                "insert": "(); \n}\n\nIf you're using React you'll probably want to load the resulting html in this manner:\n\n    "
+            },
+            {
+                "attributes": {
+                    "color": "#808080"
+                },
+                "insert": "<"
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "p"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": " dangerouslySetInnerHTML"
+            },
+            {
+                "insert": "="
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "{"
+            },
+            {
+                "insert": "{"
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "__html:"
+            },
+            {
+                "insert": " "
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "props"
+            },
+            {
+                "insert": "."
+            },
+            {
+                "attributes": {
+                    "color": "#9cdcfe"
+                },
+                "insert": "content"
+            },
+            {
+                "insert": "}"
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "} >"
+            },
+            {
+                "attributes": {
+                    "color": "#808080"
+                },
+                "insert": "</"
+            },
+            {
+                "attributes": {
+                    "color": "#569cd6"
+                },
+                "insert": "p"
+            },
+            {
+                "attributes": {
+                    "color": "#808080"
+                },
+                "insert": ">"
+            },
+            {
+                "insert": "\n\nAnd that's basically how the process works. More or less... Sort of in a nut shell.\n\nI'll expand on the inner workings of both this editor and how to use it in conjunction with your blog in the following days!\n\n\n\n\n\n\n"
             }
         ]
     },
     {
-        "id": 32452345,
-        "title": "Where does it come from?",
-        "dayMonthYear": "5/March/2021",
+        "id": 473873,
+        "title": "The text editor gets some save functionality",
+        "dayMonthYear": "23/March/2021",
         "ops": [
             {
-                "insert": "\n"
-            },
-            {
-                "attributes": {
-                    "background": "#ff9900"
-                },
-                "insert": "Contrary to popular belief"
-            },
-            {
-                "insert": ", Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\n"
-            },
-            {
                 "insert": {
-                    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.RmAD33wbYnAHjnvPoxwAUgAAAA%26pid%3DApi&f=1"
+                    "image": "https://i.postimg.cc/zDyhrSsF/proto-editor-save.png"
                 }
             },
             {
-                "insert": "\n"
+                "insert": "\n\nI don't plan on adding the finishing touches just yet, but the previous version of this editor was a bit too barebones even for the spartan, all-function-no-form tool that it was before. Case in point, probably the most important feature an app like this can have is to not let you spend hours writing a badass article only to have it poof into thin air because your browser froze or your OS bsod'd. Or even because you're, like, this twit and you, like, don't know, like, how to use a computer: \n\n"
             },
             {
-                "attributes": {
-                    "size": "small"
-                },
-                "insert": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+                "insert": {
+                    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff4%2Fb8%2Fa1%2Ff4b8a143dac78a3b6c4516e0d740940c.png&f=1&nofb=1"
+                }
             },
             {
-                "attributes": {
-                    "align": "center"
-                },
-                "insert": "\n"
-            },
-            {
-                "insert": "\n"
-            },
-            {
-                "insert": "filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler "
-            },
-            {
-                "insert": "\n\n"
-            }            
+                "insert": "\n\n...Thaaat's right honey, we know! It's your fault you lost your paper,  you forgot to save save your progress, then you did something stupid then bip bip bip bip! Half your paper is gone! \n\nGranted, if you're her, a save button probably won't help much but, then again, neither will a $2000 hipster laptop.\n"
+            }
         ]
     },
     {
-        "id": 34563456,
-        "title": "Why do we use it?",
-        "dayMonthYear": "6/March/2021",
+        "id": 47535858473,
+        "title": "So I started making a note-taking app",
+        "dayMonthYear": "24/March/2021",
         "ops": [
             {
-                "attributes": {
-                    "font": "monospace"
-                },
-                "insert": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)"
+                "insert": "There are a dime a dozen of these things on google play or on the firefox extension store - if anything, everyone and their grandma is making to-do apps, but I'll be damned if I can find one that does all the basic things I need it to: \nBe open source and don't collect data on the user."
             },
             {
                 "attributes": {
-                    "align": "right",
-                    "direction": "rtl"
+                    "list": "ordered"
                 },
-                "insert": "\n\n"
+                "insert": "\n"
+            },
+            {
+                "insert": "Allow me to save anywhere I want in a proper format."
             },
             {
                 "attributes": {
-                    "font": "monospace"
+                    "list": "ordered"
                 },
+                "insert": "\n"
+            },
+            {
+                "insert": "That's it! I don't think, it's a demanding set of features.\n\nSo I came up with this:\n\n"
+            },
+            {
                 "insert": {
-                    "image": "//:0"
+                    "image": "https://i.ibb.co/rM3YR9f/dynamic-notes-1.png"
                 }
             },
             {
-                "attributes": {
-                    "font": "monospace"
-                },
-                "insert": "."
+                "insert": "\n\nIt's a bit basic and, while I plan to bling it up a bit, uncomplicated is how I think a note taking app should be. It might look like it's inspired by "
             },
             {
                 "attributes": {
-                    "align": "right",
-                    "direction": "rtl"
+                    "link": "https://addons.mozilla.org/en-US/firefox/addon/notes-by-firefox/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
                 },
-                "insert": "\n"
+                "insert": "this"
             },
             {
-                "insert": "\n"
-            },
-            {
-                "insert": "filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler "
-            },
-            {
-                "insert": "\n\n"
-            }            
+                "insert": " browser extension ... that's because it is! I don't think the formula is broke so I didn't set out to fix anything. Well, except the useless html export format. And the fact that you have to switch between the note list and the editor even if you're working from a wide-screen monitor, which I find inconvenient. Ok I'll be changing a few things here and there, we'll see how it goes.\n"
+            }
         ]
     },
     {
-        "id": 35467537867,
-        "title": "Where can I get some?",
-        "dayMonthYear": "7/March/2021",
+        "id": 135433513,
+        "title": "I'm making an ecommerce app with it's own server to polish my full-stack skills.",
+        "dayMonthYear": "9/April/2021",
         "ops": [
             {
-                "attributes": {
-                    "color": "#ffc266"
-                },
-                "insert": "There are many variations of passages of Lorem Ipsum available"
-            },
-            {
-                "insert": ", but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. "
-            },
-            {
-                "attributes": {
-                    "font": "monospace"
-                },
-                "insert": "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,"
-            },
-            {
-                "attributes": {
-                    "font": "monospace",
-                    "script": "super"
-                },
-                "insert": " making this the first true generator on the Internet"
-            },
-            {
-                "attributes": {
-                    "font": "monospace"
-                },
-                "insert": ". It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc"
-            },
-            {
-                "attributes": {
-                    "align": "right",
-                    "direction": "rtl"
-                },
-                "insert": "\n\n\n\n"
+                "insert": "Making static and simplistic online shops may be enough to get a web developer going, but until we gain experience working behind the curtain, there can never really be any question of expertise, even if swear by your identity as a front-end dev. You need to know what those convenient AJAX calls actually do. You need to know how a server handles security. You need to know [------------------------------]\n\nThe rise in complexity prompted a more comprehensive site design chalk full of features.\n\n"
             },
             {
                 "insert": {
-                    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.6ayyUtw6AbAkNAbOxL0qxgHaFj%26pid%3DApi&f=1"
+                    "image": "https://i.ibb.co/K9sdN3r/mock-ecommerce-featured1.png"
                 }
+            },
+            {
+                "insert": "       "
             },
             {
                 "insert": {
-                    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.fU8S5eJR6cpWYAt7Oe6vRQAAAA%26pid%3DApi&f=1"
+                    "image": "https://i.ibb.co/Mk58fxT/mock-ecommerce-product1.png"
                 }
             },
             {
-                "insert": "."
-            },
-            {
-                "attributes": {
-                    "align": "right",
-                    "direction": "rtl"
-                },
-                "insert": "\n"
-            },
-            {
-                "insert": "\n"
-            },
-            {
-                "insert": "filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler "
-            },
-            {
-                "insert": "\n\n"
-            }            
-        ]
-    },
-    {
-        "id": 6756387,
-        "title": "The standard Lorem Ipsum passage, used since the 1500s",
-        "dayMonthYear": "8/March/2021",
-        "ops": [
-            {
-                "insert": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-            },
-            {
-                "attributes": {
-                    "align": "right",
-                    "direction": "rtl"
-                },
-                "insert": "\n\n"
+                "insert": "\n\n\nSo there's now a ton of data that can populate the store's various showcase items. User authentication and a cart feature are, of course, now possible as well:\n\n\n"
             },
             {
                 "insert": {
-                    "image": "//:0"
+                    "image": "https://i.ibb.co/znLg6cj/mock-ecommerce-cart1.png"
                 }
             },
             {
-                "insert": ".\""
+                "insert": "      "
             },
             {
-                "attributes": {
-                    "align": "right",
-                    "direction": "rtl"
-                },
-                "insert": "\n"
+                "insert": {
+                    "image": "https://i.ibb.co/CKMkD7M/mock-ecommerce-authentication1.png"
+                }
             },
             {
-                "insert": "\n"
-            },
-            {
-                "insert": "filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler "
-            },
-            {
-                "insert": "\n\n"
-            }            
+                "insert": "\n\n\nAlright then! I can't wait to turn these mock ups into a usable app!\n"
+            }
         ]
     }
 ]

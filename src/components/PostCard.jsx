@@ -35,7 +35,8 @@ function PostCard(props) {
     )
 }
 
-const extractCardImageAndParagraph =(content) => {
+// ### It should show, guaranteed, both the first image and the first paragraph --- maybe the paragraph should be first?
+const extractCardImageAndParagraph =(content) => { 
     const contentElement = document.createElement("html");
     contentElement.innerHTML = content;
     const cardImage = contentElement.getElementsByTagName("img")[0]; //so the image to be shown on the card will always be the first    
